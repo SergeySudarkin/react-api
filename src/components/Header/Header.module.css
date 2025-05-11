@@ -9,7 +9,7 @@
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-p {
+.info {
     text-transform: capitalize;
     display: flex;
     justify-content: center;
@@ -17,11 +17,4 @@ p {
     gap: 10px;
     cursor: pointer;
     user-select: none;
-}
-
-.headerButtons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
