@@ -32,6 +32,7 @@ export default [
             "react/jsx-no-target-blank": 1,
             "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
             "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+            "react/prop-types": "warn",
             "prettier/prettier": [
                 "error",
                 {
