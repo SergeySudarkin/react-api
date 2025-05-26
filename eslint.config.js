@@ -33,6 +33,7 @@ export default [
             "no-unused-vars": ["warn", { varsIgnorePattern: "^[A-Z_]" }],
             "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
             "react/prop-types": "warn",
+            "react/display-name": "off",
             "prettier/prettier": [
                 "error",
                 {

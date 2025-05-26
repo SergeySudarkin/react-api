@@ -1,12 +1,13 @@
+import { memo } from "react";
 import { PreviewCard } from "../PreviewCard";
 import cls from "./PreviewCardList.module.css";
 
-export const PreviewCardList = ({ cards }) => {
+export const PreviewCardList = memo(({ cards }) => {
     return (
         <div className={cls.cardList}>
-            {cards.map((card, index) => {
-                return <PreviewCard card={card} key={index} />;
+            {cards.map((card) => {
+                return <PreviewCard card={card} key={card["Номер"]} />;
             })}
         </div>
     );
-};
+});

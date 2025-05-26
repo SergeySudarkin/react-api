@@ -7,6 +7,7 @@ import { useFetch } from "../../hooks/useFetch";
 
 export const HomePage = () => {
     const [cards, setCards] = useState([]);
+    const [searchValue, setSearchValue] = useState("");
 
     const [getCards, isLoading, error] = useFetch(async () => {
         const response = await fetch(API_URL);
@@ -21,12 +22,19 @@ export const HomePage = () => {
         getCards();
     }, []);
 
+    const onSearchChangeHandler = (e) => {
+        setSearchValue(e.target.value);
+    };
+
     return (
         <>
+            <h1 className={cls.homeTitle}>Новомученики и Исповедники</h1>
+
+            <input type="text" value={searchValue} onChange={onSearchChangeHandler} />
+
             {isLoading && <Loader />}
             {error && <p>{error}</p>}
 
-            <h1 className={cls.homeTitle}>Новомученики и Исповедники</h1>
             <PreviewCardList cards={cards} />
         </>
     );
