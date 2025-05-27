@@ -4,6 +4,7 @@ import cls from "./HomePage.module.css";
 import { PreviewCardList } from "../../components/PreviewCardList";
 import { Loader } from "../../components/Loader";
 import { useFetch } from "../../hooks/useFetch";
+import { SearchInput } from "../../components/SearchInput";
 
 export const HomePage = () => {
     const [cards, setCards] = useState([]);
@@ -30,7 +31,9 @@ export const HomePage = () => {
         <>
             <h1 className={cls.homeTitle}>Новомученики и Исповедники</h1>
 
-            <input type="text" value={searchValue} onChange={onSearchChangeHandler} />
+            <div className={cls.controlsContainer}>
+                <SearchInput value={searchValue} onChange={onSearchChangeHandler} />
+            </div>
 
             {isLoading && <Loader />}
             {error && <p>{error}</p>}
