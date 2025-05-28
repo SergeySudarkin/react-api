@@ -1,13 +1,11 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import { API_URL } from "../../constants";
+import { API_URL, ITEMS_PER_PAGE } from "../../constants";
 import cls from "./HomePage.module.css";
 import { PreviewCardList } from "../../components/PreviewCardList";
 import { Loader } from "../../components/Loader";
 import { useFetch } from "../../hooks/useFetch";
 import { SearchInput } from "../../components/SearchInput";
-import { Button } from "../../components/Button";
-
-const ITEMS_PER_PAGE = 5;
+import { Pagination } from "../../components/Pagination";
 
 export const HomePage = () => {
     const [cards, setCards] = useState([]);
@@ -80,15 +78,9 @@ export const HomePage = () => {
             {filterCards.length === 0 ? (
                 <p className={cls.noCardsInfo}>No cards...</p>
             ) : (
-                <div className={cls.paginationContainer} onClick={paginationHandler}>
-                    {pagination.map((value) => {
-                        return (
-                            <Button key={value} isActive={value === currentPage}>
-                                {value}
-                            </Button>
-                        );
-                    })}
-                </div>
+                pagination.length > 1 && (
+                    <Pagination pagination={pagination} onClick={paginationHandler} currentPage={currentPage} />
+                )
             )}
         </>
     );

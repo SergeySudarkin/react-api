@@ -1,0 +1,59 @@
+.container {
+    width: 100%;
+    max-width: 1000px;
+    height: max-content;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 25px;
+}
+
+.container button {
+    width: 100%;
+}
+
+.cardTitle {
+    font-size: 24px;
+    line-height: 28px;
+    align-self: center;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.cardText {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.cardEvents {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 5px;
+}
+
+.cardEvents li {
+    margin-left: 25px;
+}
+
+.cardImg {
+    width: 100%;
+    max-width: 600px;
+    max-height: 450px;
+    object-fit: contain;
+    margin: 0 auto;
+}
