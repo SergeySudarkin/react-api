@@ -16,7 +16,7 @@ export const PreviewCard = ({ card }) => {
                 )}
                 {card["Рождение"] && (
                     <p className={cls.cardText}>
-                        <strong>Информация о рождении:</strong> {card["Рождение"]["датировка"]}. <br />{" "}
+                        <strong>Информация о рождении:</strong> {card["Рождение"]["датировка"]}. <br />
                         {card["Рождение"]["текст"]}
                     </p>
                 )}

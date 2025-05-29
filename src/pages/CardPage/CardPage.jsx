@@ -43,7 +43,7 @@ export const CardPage = () => {
 
                         {card["Рождение"] && (
                             <p className={cls.cardText}>
-                                <strong>Информация о рождении:</strong> {card["Рождение"]["датировка"]}. <br />{" "}
+                                <strong>Информация о рождении:</strong> {card["Рождение"]["датировка"]}. <br />
                                 {card["Рождение"]["текст"]}
                             </p>
                         )}
@@ -63,13 +63,13 @@ export const CardPage = () => {
 
                         {card["Кончина"] && (
                             <p className={cls.cardText}>
-                                <strong>Информация о кончине:</strong> {card["Кончина"]["датировка"]}. <br />{" "}
+                                <strong>Информация о кончине:</strong> {card["Кончина"]["датировка"]}. <br />
                                 {card["Кончина"]["текст"]}
                             </p>
                         )}
                     </div>
 
-                    {card["Фотографии"] && (
+                    {card["Фотографии"] && card["Фотографии"].length > 0 && (
                         <img
                             className={cls.cardImg}
                             src={card["Фотографии"][0]["сжатое_фото_file_id"]}
