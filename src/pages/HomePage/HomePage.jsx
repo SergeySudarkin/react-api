@@ -71,7 +71,6 @@ export const HomePage = () => {
             </div>
 
             {isLoading && <Loader />}
-            {/* {error && <p>{error}</p>} */}
 
             <PreviewCardList cards={currentCards} />
 
