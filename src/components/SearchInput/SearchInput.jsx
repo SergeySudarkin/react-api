@@ -6,7 +6,7 @@ export const SearchInput = ({ value, onChange }) => {
     const inputId = useId();
 
     return (
-        <div className={cls.inputContainer}>
+        <div className={cls.inputContainer} aria-label="Строка поиска">
             <label htmlFor={inputId}>
                 <SearchIcon className={cls.searchIcon} />
             </label>

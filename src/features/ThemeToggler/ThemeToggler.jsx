@@ -15,7 +15,7 @@ export const ThemeToggler = () => {
     };
 
     return (
-        <label className={cls.switch}>
+        <label className={cls.switch} aria-label="Переключатель смены темы">
             <input type="checkbox" onChange={onChangeHandler} checked={theme === "dark"} />
             <span className={cls.slider}></span>
         </label>

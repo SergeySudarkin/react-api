@@ -12,15 +12,17 @@ export const Header = () => {
     }).format(new Date());
 
     return (
-        <header className={cls.header}>
-            <p className={cls.info} onClick={() => navigate("/")}>
+        <header className={cls.header} aria-label="Шапка сайта">
+            <p className={cls.info} onClick={() => navigate("/")} aria-label="Название сайта">
                 <img src={ReactLogo} alt="react logo" />
                 <span>React Interface</span>
             </p>
 
             <ThemeToggler />
 
-            <p className={cls.headerDate}>Новомученики на {currentDate}</p>
+            <p className={cls.headerDate} aria-label="Новомученики на сегодняшний день">
+                Новомученики на {currentDate}
+            </p>
         </header>
     );
 };

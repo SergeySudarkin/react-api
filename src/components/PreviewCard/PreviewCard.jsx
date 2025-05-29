@@ -6,9 +6,11 @@ export const PreviewCard = ({ card }) => {
     const navigate = useNavigate();
 
     return (
-        <div className={cls.card}>
-            <h5 className={cls.cardTitle}>{card["ФИО"]}</h5>
-            <div className={cls.cardShortInfo}>
+        <div className={cls.card} aria-label="Карточка">
+            <h5 className={cls.cardTitle} aria-label="ФИО">
+                {card["ФИО"]}
+            </h5>
+            <div className={cls.cardShortInfo} aria-label="Краткая информация карточки">
                 {card["сан_церк_служение"] && (
                     <p className={cls.cardText}>
                         <strong>Церковный сан:</strong> {card["сан_церк_служение"]}
@@ -26,7 +28,9 @@ export const PreviewCard = ({ card }) => {
                     </p>
                 )}
             </div>
-            <Button onClick={() => navigate(`/card/${card["Номер"]}`)}>Подробнее</Button>
+            <Button onClick={() => navigate(`/card/${card["Номер"]}`)} ariaLabel="Переход на подробную информацию о карточке">
+                Подробнее
+            </Button>
         </div>
     );
 };

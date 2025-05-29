@@ -14,7 +14,7 @@ export const MainLayout = () => {
                     <main className={cls.main}>
                         <Outlet />
                     </main>
-                    <footer className={cls.footer}>
+                    <footer className={cls.footer} aria-label="Информация о сайте">
                         React Interface Application | {currentYear} <br />
                         База данных «За Христа пострадавшие»
                     </footer>

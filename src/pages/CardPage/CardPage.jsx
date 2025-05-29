@@ -32,8 +32,10 @@ export const CardPage = () => {
             ) : card === null ? (
                 <NotFoundPage />
             ) : (
-                <div className={cls.container}>
-                    <h5 className={cls.cardTitle}>{card["ФИО"]}</h5>
+                <div className={cls.container} aria-label="Подробная информация карточки">
+                    <h5 className={cls.cardTitle} aria-label="ФИО">
+                        {card["ФИО"]}
+                    </h5>
                     <div className={cls.cardInfo}>
                         {card["сан_церк_служение"] && (
                             <p className={cls.cardText}>
@@ -49,11 +51,11 @@ export const CardPage = () => {
                         )}
 
                         {card["События"] && (
-                            <ul className={cls.cardEvents}>
+                            <ul className={cls.cardEvents} aria-label="Список событий">
                                 <strong className={cls.cardText}>События:</strong>
                                 {card["События"].map((item, index) => {
                                     return (
-                                        <li key={index}>
+                                        <li key={index} aria-label="Событие">
                                             <strong>{item["датировка"] && `${item["датировка"]}:`} </strong> {item["текст"]}
                                         </li>
                                     );
@@ -77,7 +79,9 @@ export const CardPage = () => {
                         />
                     )}
 
-                    <Button onClick={() => navigate("/")}>Назад</Button>
+                    <Button onClick={() => navigate("/")} ariaLabel="Переход на главную страницу">
+                        Назад
+                    </Button>
                 </div>
             )}
         </>

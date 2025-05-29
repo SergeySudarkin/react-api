@@ -62,11 +62,11 @@ export const HomePage = () => {
 
     return (
         <>
-            <h1 className={cls.homeTitle} ref={homeTitleRef}>
+            <h1 className={cls.homeTitle} ref={homeTitleRef} aria-label="Заголовок списка">
                 Новомученики и Исповедники
             </h1>
 
-            <div className={cls.controlsContainer}>
+            <div className={cls.controlsContainer} aria-label="Контейнер управления списком">
                 <SearchInput value={searchValue} onChange={onSearchChangeHandler} />
             </div>
 
