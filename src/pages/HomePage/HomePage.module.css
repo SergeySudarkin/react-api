@@ -18,3 +18,10 @@
     width: fit-content;
     margin: 0 auto;
 }
+
+@media (max-width: 530px) {
+    .homeTitle {
+        font-size: 26px;
+        padding: 20px 0;
+    }
+}

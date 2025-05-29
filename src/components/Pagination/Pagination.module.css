@@ -9,3 +9,9 @@
     align-items: center;
     gap: 10px;
 }
+
+@media (max-width: 530px) {
+    .paginationContainer {
+        padding: 10px 10px 10px 10px;
+    }
+}
