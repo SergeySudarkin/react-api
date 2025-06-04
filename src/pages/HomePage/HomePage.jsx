@@ -62,7 +62,7 @@ export const HomePage = () => {
 
     return (
         <>
-            <h1 className={cls.homeTitle} ref={homeTitleRef} aria-label="Заголовок списка">
+            <h1 className={cls.homeTitle} ref={homeTitleRef}>
                 Новомученики и Исповедники
             </h1>
 

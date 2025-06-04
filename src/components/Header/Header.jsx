@@ -13,8 +13,8 @@ export const Header = () => {
 
     return (
         <header className={cls.header} aria-label="Шапка сайта">
-            <p className={cls.info} onClick={() => navigate("/")} aria-label="Название сайта">
-                <img src={ReactLogo} alt="react logo" />
+            <p className={cls.info} onClick={() => navigate("/")} aria-label="Название сайта" role="link">
+                <img src={ReactLogo} alt="Логотип" />
                 <span>React Interface</span>
             </p>
 
